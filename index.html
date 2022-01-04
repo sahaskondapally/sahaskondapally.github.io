@@ -4,11 +4,15 @@
     <title>Assigning</title>
     <script type = "text/javascript">
         function Assign() {
-         window.location.assign("https://stackabuse.com/");
+         window.location.assign("https://pay-dev.connectpay.com/payment/redirect/citadele/success");
+        }
+        function unAssign() {
+         window.location.assign("https://pay-dev.connectpay.com/payment/redirect/citadele/failure");
         }
     </script>
 </head>
 <body>
-    <input type="button" value="Redirect Me" onclick="Assign()" />
+    <input type="button" value="success case" onclick="Assign()" />
+    <input type="button" value="Failure case" onclick="unAssign()" />
 </body>
 </html>
