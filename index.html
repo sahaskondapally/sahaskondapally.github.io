@@ -7,11 +7,13 @@
          window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele/");
         }
         function unAssign() {
-         window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele/");
+         window.location.assign("https://pay-stage.connectpay.com/payment/redirect/citadele/");
         }
     </script>
 </head>
 <body>
+    <input type="button" value="success case" onclick="Assign()" />
+    <input type="button" value="qa case" onclick="unAssign()" />
     <input type="button" value="success case" onclick="Assign()" />
 </body>
 </html>
