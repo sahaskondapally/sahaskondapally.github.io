@@ -9,10 +9,18 @@
         function unAssign() {
          window.location.assign("https://pay-dev.connectpay.com/payment/redirect/medicinos");
         }
+        function medQA() {
+         window.location.assign("https://pay-qa.connectpay.com/payment/redirect/medicinos");
+        }
+        function medSTAGE() {
+         window.location.assign("https://pay-stage.connectpay.com/payment/redirect/medicinos");
+        }
     </script>
 </head>
 <body>
     <input type="button" value="citadele qa case" onclick="Assign()" />
     <input type="button" value="medbank dev" onclick="unAssign()" />
+    <input type="button" value="medbank QA" onclick="medQA()" />
+    <input type="button" value="medbank Satge" onclick="medSTAGE()" />
 </body>
 </html>
