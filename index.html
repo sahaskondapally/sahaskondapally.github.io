@@ -23,6 +23,7 @@
          window.location.assign("https://pay-qa.connectpay.com/payment/redirect/medicinos");
         }
         function medSTAGE() {
+            let params = (new URL(document.location)).searchParams
         window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele?key=t"+params.get("key"));
         }
     </script>
