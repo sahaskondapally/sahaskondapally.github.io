@@ -8,16 +8,16 @@
             
             if(params.get("key")!=null)
             {
-                window.location.assign("https://pay-qa.connectpay.com/payment/redirect?key="+params.get("key"));
+                window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele?key="+params.get("key"));
                 console.log(params.keys.length);
                
             }
             else
-                 window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele/");
+                 window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele");
         
         }
         function unAssign() {
-         window.location.assign("https://pay-dev.connectpay.com/payment/redirect/medicinos");
+         window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele");
         }
         function medQA() {
          window.location.assign("https://pay-qa.connectpay.com/payment/redirect/medicinos");
@@ -28,8 +28,8 @@
     </script>
 </head>
 <body>
-    <input type="button" value="citadele qa case" onclick="Assign()" />
-    <input type="button" value="medbank dev" onclick="unAssign()" />
+    <input type="button" value="citadele qa failure case" onclick="Assign()" />
+    <input type="button" value="citadele qa success case" onclick="unAssign()" />
     <input type="button" value="medbank QA" onclick="medQA()" />
     <input type="button" value="medbank Satge" onclick="medSTAGE()" />
 </body>
