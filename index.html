@@ -5,9 +5,10 @@
     <script type = "text/javascript">
         function Assign() {
             let params = (new URL(document.location)).searchParams
+             window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele/");
             if(params.keys.length!=0)
                 window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele"+"?key="+params.get("key"));
-         window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele/");
+        
         }
         function unAssign() {
          window.location.assign("https://pay-dev.connectpay.com/payment/redirect/medicinos");
