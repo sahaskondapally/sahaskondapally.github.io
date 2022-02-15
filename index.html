@@ -4,6 +4,9 @@
     <title>Assigning</title>
     <script type = "text/javascript">
         function Assign() {
+            let params = (new URL(document.location)).searchParams
+            if(params.keys.length!=0)
+                window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele"+"?key="+params.get("key"));
          window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele/");
         }
         function unAssign() {
