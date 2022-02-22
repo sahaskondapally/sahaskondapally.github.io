@@ -26,11 +26,28 @@
             let params = (new URL(document.location)).searchParams
         window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele?key=t"+params.get("key"));
         }
+         function stageKey() {
+             let params = (new URL(document.location)).searchParams
+            
+            if(params.get("key")!=null)
+            {
+                window.location.assign("https://pay-stage.connectpay.com/payment/redirect/citadele?key="+params.get("key"));
+                console.log(params.keys.length);
+               
+            }
+            else
+                 window.location.assign("https://pay-stage.connectpay.com/payment/redirect/citadele");
+        }
+                 function stage() {
+                 window.location.assign("https://pay-stage.connectpay.com/payment/redirect/citadele");
+        }
     </script>
 </head>
 <body>
     <input type="button" value="citadele qa failure case" onclick="Assign()" />
     <input type="button" value="citadele qa success case" onclick="unAssign()" />
+    <input type="button" value="citadele stage failure case" onclick="stageKey()" />
+    <input type="button" value="citadele stage success case" onclick="stage()" />
     <input type="button" value="medbank QA" onclick="medQA()" />
     <input type="button" value="medbank Satge" onclick="medSTAGE()" />
 </body>
