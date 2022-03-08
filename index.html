@@ -6,7 +6,7 @@
         function Assign() {
             let params = (new URL(document.location)).searchParams
             
-            if(params.get("key")!=null)
+            if(params.get("stage")!=null)
             {
                 window.location.assign("https://pay-dev.connectpay.com/payment/redirect/citadele?state="+params.get("state"));
                 console.log(params.keys.length);
