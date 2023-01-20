@@ -16,11 +16,27 @@
                  window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele");
         
         }
+       function devAssign() {
+            let params = (new URL(document.location)).searchParams
+            
+            if(params.get("state")!=null)
+            {
+                window.location.assign("https://pay-dev.connectpay.com/payment/redirect/citadele?state="+params.get("state"));
+                console.log(params.keys.length);
+               
+            }
+            else
+                 window.location.assign("https://pay-dev.connectpay.com/payment/redirect/citadele");
+        
+        }
         function unAssign() {
          window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele");
         }
+        function devunAssign() {
+         window.location.assign("https://pay-qa.connectpay.com/payment/redirect/citadele");
+        }
         function medQA() {
-         window.location.assign("https://pay-qa.connectpay.com/payment/redirect/medicinos");
+         window.location.assign("https://pay-dev.connectpay.com/payment/redirect/medicinos");
         }
         function medSTAGE() {
             let params = (new URL(document.location)).searchParams
@@ -46,6 +62,8 @@
 <body>
     <input type="button" value="citadele qa failure case" onclick="Assign()" />
     <input type="button" value="citadele qa success case" onclick="unAssign()" />
+     <input type="button" value="citadele dev success case" onclick="devAssign()" />
+    <input type="button" value="citadele dev failure case" onclick="devunAssign()" />
     <input type="button" value="citadele stage failure case" onclick="stageKey()" />
     <input type="button" value="citadele stage success case" onclick="stage()" />
     <input type="button" value="medbank QA" onclick="medQA()" />
